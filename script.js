@@ -42,25 +42,30 @@ const team = [
 console.log(team);
 
 
-// selezione card-image
-let cardImg = document.querySelector(".card-image");
+// selezione team-container
+let teamCard = document.querySelector(".team-container");
 
-//ciclo for immagini
-let teamImages = "";
+//ciclo for infoteam
+let teamInfo = "";
 
 for (let i = 0; i < team.length; i++) {
     // console.log(team[i].image);
-    // teamImages += team[i].image;
-    teamImages += `
-    <div class="card-image">
+    teamInfo += `    
+          <div class="team-card">
+            <div class="card-image">
               <img
-                src="team[i].image"
-                alt="nome membro"/>
+                src="${team[i].image}"
+                alt="${team[i].name}"
+              />
             </div>
+            <div class="card-text">
+              <h3>${team[i].name}</h3>
+              <p>${team[i].role}</p>
+            </div>
+          </div>        
     `
-    console.log(teamImages);
+    console.log(teamInfo);
 }
 
 //output html
-cardImg.innerHTML = teamImages;
-document.getElementsByClassName(".card-image").innerHTML = teamImages
+teamCard.innerHTML = teamInfo;
