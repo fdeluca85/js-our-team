@@ -40,3 +40,27 @@ const team = [
     },
 ];
 console.log(team);
+
+
+// selezione card-image
+let cardImg = document.querySelector(".card-image");
+
+//ciclo for immagini
+let teamImages = "";
+
+for (let i = 0; i < team.length; i++) {
+    // console.log(team[i].image);
+    // teamImages += team[i].image;
+    teamImages += `
+    <div class="card-image">
+              <img
+                src="team[i].image"
+                alt="nome membro"/>
+            </div>
+    `
+    console.log(teamImages);
+}
+
+//output html
+cardImg.innerHTML = teamImages;
+document.getElementsByClassName(".card-image").innerHTML = teamImages
